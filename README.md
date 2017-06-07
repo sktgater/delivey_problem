@@ -6,12 +6,6 @@ Author: Li Wang
 Description of the Question:
 A postman is delivering mails in a square-shaped town. He starts from the start (S) and would arrive at the goal (G). 
 On the way, he has to deliver mails at some checkpoints (X).
-One possible configuration of the town is like:
-########
-#...G.X#
-#.##.X.#
-#S.X...#
-########
 Calculate the minimum distance the postman has to travel from the start to the goal while passing all the checkpoints. 
 
 Remarks:
