@@ -38,3 +38,5 @@ Return -1 if not reachable
 3. get shortest paths from each X to each other X
 4. get shortest path from each X to the G
 5. find shortest distance from starting point, via all midway checkpoints to the ending point
+
+Assumptions: only has one goal point and one starting point.

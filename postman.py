@@ -15,8 +15,9 @@ Each checkpoint is matched under the same list index
 Return -1 if not reachable
 3. get shortest paths from each X to each other X
 4. get shortest path from each X to the G
-5. backtracking, find total shortest distance
+5. find total shortest distance from starting point, via all midway checkpoints to the ending point
 
+Assumptions: only has one goal point and one starting point.
 """
 from collections import deque
 from Node import Node
