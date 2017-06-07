@@ -18,3 +18,6 @@ print s.delivery(matrix3)
 matrix4 = [['X',1,'G'],[0,1,1],['S',0,'X']]
 print s.delivery(matrix4)
 
+# Case that no X exists
+matrix5 = [[0,0,0,'G',0,1], [0,1,1,0,1,0], ['S',0,1,0,0,0]]
+print s.delivery(matrix5)

@@ -17,7 +17,8 @@ Return -1 if not reachable
 4. get shortest path from each X to the G
 5. find total shortest distance from starting point, via all midway checkpoints to the ending point
 
-Assumptions: only has one goal point and one starting point.
+Assumptions: has and only has one goal point and one starting point.
+
 """
 from collections import deque
 from Node import Node
@@ -40,6 +41,10 @@ class Solution(object):
 					goal_point = (i,j)
 				elif matrix[i][j] == 'X':
 					check_points.append((i,j))
+
+		if len(check_points) == 0:
+			print "No Checkpoint Exists"
+			return -1
 
 		# Step 2. Find shortest paths from 'S' -> Each 'X'
 		S_X_paths = []
@@ -68,7 +73,9 @@ class Solution(object):
 					newPath = prev + [location]
 					queue.append(Node(newPath, action))
 		# Some checkpoints are not reachable. Return -1
-		if len(check_points) != len(S_X_paths): return -1
+		if len(check_points) != len(S_X_paths): 
+			print "Some Checkpoints Are Unreachable"
+			return -1
 		
 		# Step 3. Find shortest paths between each 'X' <-> each other 'X'
 		X_X_paths = []
@@ -124,7 +131,9 @@ class Solution(object):
 					newPath = prev + [location]
 					queue.append(Node(newPath, action))
 		# Some checkpoints cannot reach goal. Return -1
-		if len(check_points) != len(X_G_paths): return -1
+		if len(check_points) != len(X_G_paths): 
+			print "Some Checkpoints Cannot Reach The Goal"
+			return -1
 
 		# Step 5. Find minimum path from S to G via all X
 		# 3 sets of dictionaries to store path costs

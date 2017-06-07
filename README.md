@@ -1,9 +1,9 @@
-# delivey_problem
+# Delivey Problem
 Delivery Problem with Midway Checkpoints
 
 Author: Li Wang
 
-Description of the Question:
+Description of the Problem:
 A postman is delivering mails in a square-shaped town. He starts from the start (S) and would arrive at the goal (G). 
 On the way, he has to deliver mails at some checkpoints (X).
 Calculate the minimum distance the postman has to travel from the start to the goal while passing all the checkpoints. 
